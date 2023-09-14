@@ -4,29 +4,33 @@
 int main()
 {
 
-    char alphabet  ;
-    printf("veuillez entrer une alphabet :");
-    scanf("%c",&alphabet) ;
-    switch (alphabet){
-    case 'A' :
-    printf("A est un voyelle") ;
+    float A , B , S ;
+    char operator ;
+    operator = '+' , '-' , '*' , '/' ;
+    printf("entre la valeur de le nombre A :") ;
+    scanf("%f",&A) ;
+    printf(" entre l'operator :") ;
+    scanf(" %c",&operator ) ;
+    printf("entre la valeur de le nombre B :") ;
+    scanf("%f",&B) ;
+    switch(operator){
+    case '+' :
+        printf("le resultat est  %.2f ",A+B);
+
     break;
-    case 'E' :
-    printf(" E est un voyelle") ;
+     case '-' :printf("le resultat est %.2f ",A-B);
     break;
-     case 'U' :
-    printf("U est un voyelle") ;
+     case '*' :printf(" le resultat est  %.2f ",A*B);
     break;
-     case 'I' :
-    printf("I est un voyelle") ;
+     case '/' :
+     if(B != 0 )
+        printf("le resultat est %.2f ",A/B);
+      else
+         printf("operation imposible");
     break;
-     case 'O' :
-    printf("O est un voyelle") ;
-     case 'Y' :
-    printf("y est un voyelle") ;
-    break;
-    default :
-    printf("L'alphabet que vous saisiez est consonnes ");
+     default :
+        printf("l'operation demander  est inactif ") ;
     }
+
     return 0;
 }
